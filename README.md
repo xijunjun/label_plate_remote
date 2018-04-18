@@ -1,4 +1,4 @@
-# label_plate
+# label_plate_remote
 Easy to label China plate<br>
 ## 程序功能：这是一个用来标注中国车牌的程序
     标注信息包括【四个点的坐标（顺时针排序），颜色，行数，车牌号】，格式为[x1 y1 x2 y2 x3 y3 x4 y4 color nline plate_string]
@@ -15,7 +15,7 @@ Easy to label China plate<br>
     mk_keymap.py来配置当前环境的下的按键值，按界面提示操作，配置文件自动保存在key_val.txt，key_val_win.txt(windows)，
     只需配置一次即可。
 ### 二、修改代码：
-    1.修改程序中的local_path为需要标注的文件夹路径
+    1.这个是一个通过ftp对远程主机上的文件进行标注的工具，需要在程序中设定主机ip、端口、用户帐号、密码信息，目录修改为home目录下的路径。
     2.根据屏幕分辨率，修改 MAX_WIDTH和MAX_HEIGHT，分别代表图像窗口最大的宽度和高度(确保图像显示不会超出屏幕)
 ### 三、标注程序使用步骤：
     1.运行label_plate.py，会弹出图像窗口
@@ -38,3 +38,4 @@ Easy to label China plate<br>
     5.程序只会处理指定目录下后缀为'.png','.jpeg','.jpg','bmp'的图像，不会处理指定目录下子文件夹里的图像
     6.车牌中不含字母O和I，所以输入车牌信息时无法输入字母O和I
     7.你也可以用此程序来只标注4个点，将only4points改为1即可，标注信息只包括目标的四个点
+    8.标注好的图片会保存到当前目录下的“标注完成文件夹”，同时修改远程主机上的文件
